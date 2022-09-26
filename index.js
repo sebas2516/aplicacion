@@ -10,18 +10,18 @@ const port=process.env.PORT || 3000;
 app.use(express.json());
 
 //const whitelist = ['http://localhost:8080', 'https://myapp.co']
-const whitelist = ['http://localhost:8080'];
-const options = {
-  origin: (origin, callback) => {
-    if (whitelist.includes(origin)) {
-      callback(null, true);
-    } else{
-      callback(new Error('no permitido'));
-    }
-  }
-}
-routerApi(app);
-app.use(cors(options));
+// const whitelist = ['http://localhost:8080'];
+// const options = {
+//   origin: (origin, callback) => {
+//     if (whitelist.includes(origin)) {
+//       callback(null, true);
+//     } else{
+//       callback(new Error('no permitido'));
+//     }
+//   }
+// }
+// routerApi(app);
+// app.use(cors(options));
 //app.use(cors());
 
 app.get('/', (req, res) => {
