@@ -23,7 +23,7 @@ app.use(express.json());
 // routerApi(app);
 // app.use(cors(options));
 //app.use(cors());
-
+routerApi(app)
 app.get('/', (req, res) => {
   res.send('Hola mi server en express');
 })
